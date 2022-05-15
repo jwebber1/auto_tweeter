@@ -18,7 +18,7 @@ todays_dict = quotes.QUOTES[delta_days.days%len(quotes.QUOTES)]
 todays_text = f'Good morning!\n\n{todays_dict["text"]}\n'
 
 if todays_dict["author"] != None or todays_dict["author"] != "":
-  todays_text += f'-{todays_dict["author"]}\n'
+  todays_text += f'- {todays_dict["author"]}\n'
 todays_text += f'\nSpecial thanks to SergeyWebPro for compiling the quotes\nhttps://forum.freecodecamp.org/t/free-api-inspirational-quotes-json-with-code-examples/311373'
 
 response = client.create_tweet(text=todays_text)
